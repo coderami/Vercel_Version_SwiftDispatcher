@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 13% 8%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 13% 12%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 13% 14%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 160 84% 39%;
+    --primary-foreground: 220 13% 8%;
+
+    --secondary: 220 13% 18%;
+    --secondary-foreground: 210 20% 82%;
+
+    --muted: 220 10% 16%;
+    --muted-foreground: 215 12% 52%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 220 13% 8%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 160 84% 39%;
+
+    --radius: 0.5rem;
+
+    --pickup: 45 93% 47%;
+    --pickup-foreground: 220 13% 8%;
+
+    --lane-bg: 220 13% 10%;
+    --drop-zone: 160 84% 39%;
+    --staging-border: 215 12% 32%;
+
+    --sidebar-background: 220 13% 10%;
+    --sidebar-foreground: 210 20% 82%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 220 13% 8%;
+    --sidebar-accent: 220 13% 16%;
+    --sidebar-accent-foreground: 210 20% 82%;
+    --sidebar-border: 220 13% 20%;
+    --sidebar-ring: 160 84% 39%;
+
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Inbox thick visible scrollbar – always shown */
+  .inbox-scrollbar {
+    scrollbar-width: auto;
+    scrollbar-color: #475569 #f1f5f9;
+  }
+  .inbox-scrollbar::-webkit-scrollbar {
+    height: 12px;
+    display: block;
+  }
+  .inbox-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 6px;
+  }
+  .inbox-scrollbar::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 6px;
+    min-width: 40px;
+  }
+  .inbox-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+
+  /* Active deliveries vertical scrollbar */
+  .active-scrollbar {
+    scrollbar-width: auto;
+    scrollbar-color: hsl(215 25% 27%) hsl(210 40% 98%);
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    -webkit-overflow-scrolling: touch;
+  }
+  .active-scrollbar::-webkit-scrollbar {
+    width: 12px;
+    display: block;
+  }
+  .active-scrollbar::-webkit-scrollbar-track {
+    background: hsl(210 40% 98%);
+    border-radius: 9999px;
+  }
+  .active-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(215 25% 27%);
+    border-radius: 9999px;
+    min-height: 30px;
+  }
+  .active-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(215 25% 22%);
+  }
+}

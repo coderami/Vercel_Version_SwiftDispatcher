@@ -1,0 +1,1 @@
+ALTER TABLE public.drivers ADD COLUMN route_start_time timestamp with time zone DEFAULT null;

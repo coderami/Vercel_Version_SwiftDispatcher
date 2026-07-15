@@ -1,0 +1,1 @@
+ALTER TABLE public.drivers ADD COLUMN is_on_duty boolean NOT NULL DEFAULT true;
